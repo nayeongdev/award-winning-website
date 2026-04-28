@@ -11,7 +11,7 @@ const BentoCard = ({
   src,
   title,
   description,
-  isComingSoon,
+  // isComingSoon,
 }: BentoCardProps) => {
   return (
     <div className="relative size-full">
