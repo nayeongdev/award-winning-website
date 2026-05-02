@@ -26,12 +26,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repository-name.git
+    git clone https://github.com/nayeongdev/award-winning-website.git
     ```
     (Replace `your-username/your-repository-name` with the actual remote URL if you plan to push this to a new repo)
 2.  Navigate to the project directory:
     ```bash
-    cd your-repository-name
+    cd award-winning-website
     ```
 3.  Install dependencies:
     ```bash
