@@ -28,7 +28,6 @@ These instructions will get you a copy of the project up and running on your loc
     ```bash
     git clone https://github.com/nayeongdev/award-winning-website.git
     ```
-    (Replace `your-username/your-repository-name` with the actual remote URL if you plan to push this to a new repo)
 2.  Navigate to the project directory:
     ```bash
     cd award-winning-website
