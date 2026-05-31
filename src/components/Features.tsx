@@ -22,7 +22,8 @@ const BentoTilt = ({ children, className }: BentoTiltProps) => {
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (!itemRef.current) return;
 
-    const { left, top, width, height } = itemRef.current.getBoundingClientRect();
+    const { left, top, width, height } =
+      itemRef.current.getBoundingClientRect();
 
     const relativeX = (e.clientX - left) / width;
     const relativeY = (e.clientY - top) / height;
@@ -32,11 +33,11 @@ const BentoTilt = ({ children, className }: BentoTiltProps) => {
 
     const newTransform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(0.98, 0.98, 0.98)`;
     setTransformStyle(newTransform);
-  }
+  };
 
   const handleMouseLeave = () => {
     setTransformStyle('');
-  }
+  };
 
   return (
     <div
@@ -49,7 +50,7 @@ const BentoTilt = ({ children, className }: BentoTiltProps) => {
       {children}
     </div>
   );
-}
+};
 
 const BentoCard = ({
   src,
@@ -70,7 +71,9 @@ const BentoCard = ({
         <div>
           <h1 className="bento-title special-font">{title}</h1>
           {description && (
-            <p className="mt-3 max-w-52 text-xs xl:max-w-64 xl:text-base">{description}</p>
+            <p className="mt-3 max-w-52 text-xs xl:max-w-64 xl:text-base">
+              {description}
+            </p>
           )}
         </div>
       </div>
@@ -106,7 +109,7 @@ const Features = () => (
       </BentoTilt>
 
       <div className="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7">
-        <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 border-hsla overflow-hidden rounded-md ">
+        <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
             src="videos/feature-2.mp4"
             title={
@@ -118,7 +121,7 @@ const Features = () => (
           />
         </BentoTilt>
 
-        <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0 border-hsla overflow-hidden rounded-md ">
+        <BentoTilt className="bento-tilt_1 row-span-1 ms-24 md:col-span-1 md:ms-0">
           <BentoCard
             src="videos/feature-3.mp4"
             title={
@@ -130,7 +133,7 @@ const Features = () => (
           />
         </BentoTilt>
 
-        <BentoTilt className="bento-tilt_1 border-hsla overflow-hidden rounded-md me-14 md:col-span-1 md:me-0">
+        <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
           <BentoCard
             src="videos/feature-4.mp4"
             title={
@@ -141,12 +144,10 @@ const Features = () => (
             description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
           />
         </BentoTilt>
-        <BentoTilt className="bento-tilt_2 border-hsla overflow-hidden rounded-md">
+        <BentoTilt className="bento-tilt_2">
           <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
             <h1 className="bento-title special-font max-w-64 text-black">
-              <span className="block">M<b>o</b>re</span>
-              <span className="block">co<b>m</b>ing</span>
-              <span className="block">s<b>o</b>on!</span>
+              M<b>o</b>re co<b>m</b>ing s<b>o</b>on!
             </h1>
             <TiLocationArrow className="m-5 scale-[5] self-end" />
           </div>
