@@ -109,7 +109,7 @@ body {
 }
 
 @utility bento-title {
-  @apply font-zentry text-4xl font-black uppercase md:text-6xl;
+  @apply font-zentry text-4xl font-black uppercase xl:text-6xl;
 }
 
 @utility story-img-container {
